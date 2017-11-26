@@ -14,6 +14,28 @@
 		4ABC01451FCA56CE001F2813 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ABC01431FCA56CE001F2813 /* LaunchScreen.storyboard */; };
 		4ABC01501FCA56CF001F2813 /* sportsUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC014F1FCA56CF001F2813 /* sportsUpTests.swift */; };
 		4ABC015B1FCA56CF001F2813 /* sportsUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC015A1FCA56CF001F2813 /* sportsUpUITests.swift */; };
+		4ABC016A1FCA56F6001F2813 /* RegisterRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC01691FCA56F6001F2813 /* RegisterRequestModel.swift */; };
+		4ABC016C1FCA5917001F2813 /* RegisterResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC016B1FCA5917001F2813 /* RegisterResponseModel.swift */; };
+		4ABC016E1FCA59BD001F2813 /* LoginRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC016D1FCA59BD001F2813 /* LoginRequestModel.swift */; };
+		4ABC01701FCA5A32001F2813 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC016F1FCA5A32001F2813 /* LoginResponseModel.swift */; };
+		4ABC01721FCA5BF9001F2813 /* EventListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC01711FCA5BF9001F2813 /* EventListItemModel.swift */; };
+		4ABC01741FCA600C001F2813 /* EventListRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC01731FCA600C001F2813 /* EventListRequestModel.swift */; };
+		4ABC01761FCA6029001F2813 /* EventListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC01751FCA6029001F2813 /* EventListResponseModel.swift */; };
+		4ABC01781FCA6310001F2813 /* EventDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC01771FCA6310001F2813 /* EventDetailModel.swift */; };
+		4ABC017A1FCA632C001F2813 /* NewEventRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC01791FCA632C001F2813 /* NewEventRequestModel.swift */; };
+		4ABC017C1FCA66FC001F2813 /* NewEventResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC017B1FCA66FC001F2813 /* NewEventResponseModel.swift */; };
+		4ABC017E1FCA671B001F2813 /* EventDetailRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC017D1FCA671B001F2813 /* EventDetailRequestModel.swift */; };
+		4ABC01801FCA690A001F2813 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC017F1FCA690A001F2813 /* UserModel.swift */; };
+		4ABC01821FCA6AB9001F2813 /* EventDetailResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC01811FCA6AB9001F2813 /* EventDetailResponseModel.swift */; };
+		4ABC01841FCA6CE8001F2813 /* EnrollEventRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC01831FCA6CE8001F2813 /* EnrollEventRequestModel.swift */; };
+		4ABC01861FCA6E0A001F2813 /* EnrollEventResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC01851FCA6E0A001F2813 /* EnrollEventResponseModel.swift */; };
+		4ABC01881FCA6E1F001F2813 /* UnrollEventRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC01871FCA6E1F001F2813 /* UnrollEventRequestModel.swift */; };
+		4ABC018A1FCA6E45001F2813 /* UnrollEventResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC01891FCA6E45001F2813 /* UnrollEventResponseModel.swift */; };
+		4ABC018C1FCA9659001F2813 /* StadiumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC018B1FCA9659001F2813 /* StadiumModel.swift */; };
+		4ABC018E1FCA976A001F2813 /* CreateStadiumRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC018D1FCA976A001F2813 /* CreateStadiumRequestModel.swift */; };
+		4ABC01901FCA97B8001F2813 /* CreateStadiumResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC018F1FCA97B8001F2813 /* CreateStadiumResponseModel.swift */; };
+		4ABC01921FCA99E2001F2813 /* GetStadiumRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC01911FCA99E2001F2813 /* GetStadiumRequestModel.swift */; };
+		4ABC01941FCA9A13001F2813 /* GetStadiumResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC01931FCA9A13001F2813 /* GetStadiumResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +69,28 @@
 		4ABC01561FCA56CF001F2813 /* sportsUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sportsUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ABC015A1FCA56CF001F2813 /* sportsUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sportsUpUITests.swift; sourceTree = "<group>"; };
 		4ABC015C1FCA56CF001F2813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4ABC01691FCA56F6001F2813 /* RegisterRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequestModel.swift; sourceTree = "<group>"; };
+		4ABC016B1FCA5917001F2813 /* RegisterResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponseModel.swift; sourceTree = "<group>"; };
+		4ABC016D1FCA59BD001F2813 /* LoginRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestModel.swift; sourceTree = "<group>"; };
+		4ABC016F1FCA5A32001F2813 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
+		4ABC01711FCA5BF9001F2813 /* EventListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListItemModel.swift; sourceTree = "<group>"; };
+		4ABC01731FCA600C001F2813 /* EventListRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListRequestModel.swift; sourceTree = "<group>"; };
+		4ABC01751FCA6029001F2813 /* EventListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListResponseModel.swift; sourceTree = "<group>"; };
+		4ABC01771FCA6310001F2813 /* EventDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailModel.swift; sourceTree = "<group>"; };
+		4ABC01791FCA632C001F2813 /* NewEventRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventRequestModel.swift; sourceTree = "<group>"; };
+		4ABC017B1FCA66FC001F2813 /* NewEventResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventResponseModel.swift; sourceTree = "<group>"; };
+		4ABC017D1FCA671B001F2813 /* EventDetailRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailRequestModel.swift; sourceTree = "<group>"; };
+		4ABC017F1FCA690A001F2813 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		4ABC01811FCA6AB9001F2813 /* EventDetailResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailResponseModel.swift; sourceTree = "<group>"; };
+		4ABC01831FCA6CE8001F2813 /* EnrollEventRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollEventRequestModel.swift; sourceTree = "<group>"; };
+		4ABC01851FCA6E0A001F2813 /* EnrollEventResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollEventResponseModel.swift; sourceTree = "<group>"; };
+		4ABC01871FCA6E1F001F2813 /* UnrollEventRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnrollEventRequestModel.swift; sourceTree = "<group>"; };
+		4ABC01891FCA6E45001F2813 /* UnrollEventResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnrollEventResponseModel.swift; sourceTree = "<group>"; };
+		4ABC018B1FCA9659001F2813 /* StadiumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumModel.swift; sourceTree = "<group>"; };
+		4ABC018D1FCA976A001F2813 /* CreateStadiumRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStadiumRequestModel.swift; sourceTree = "<group>"; };
+		4ABC018F1FCA97B8001F2813 /* CreateStadiumResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStadiumResponseModel.swift; sourceTree = "<group>"; };
+		4ABC01911FCA99E2001F2813 /* GetStadiumRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStadiumRequestModel.swift; sourceTree = "<group>"; };
+		4ABC01931FCA9A13001F2813 /* GetStadiumResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStadiumResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +141,7 @@
 		4ABC01391FCA56CE001F2813 /* sportsUp */ = {
 			isa = PBXGroup;
 			children = (
+				4ABC01681FCA56D7001F2813 /* models */,
 				4ABC013A1FCA56CE001F2813 /* AppDelegate.swift */,
 				4ABC013C1FCA56CE001F2813 /* ViewController.swift */,
 				4ABC013E1FCA56CE001F2813 /* Main.storyboard */,
@@ -123,6 +168,35 @@
 				4ABC015C1FCA56CF001F2813 /* Info.plist */,
 			);
 			path = sportsUpUITests;
+			sourceTree = "<group>";
+		};
+		4ABC01681FCA56D7001F2813 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				4ABC01691FCA56F6001F2813 /* RegisterRequestModel.swift */,
+				4ABC016B1FCA5917001F2813 /* RegisterResponseModel.swift */,
+				4ABC016D1FCA59BD001F2813 /* LoginRequestModel.swift */,
+				4ABC016F1FCA5A32001F2813 /* LoginResponseModel.swift */,
+				4ABC01711FCA5BF9001F2813 /* EventListItemModel.swift */,
+				4ABC01731FCA600C001F2813 /* EventListRequestModel.swift */,
+				4ABC01751FCA6029001F2813 /* EventListResponseModel.swift */,
+				4ABC017F1FCA690A001F2813 /* UserModel.swift */,
+				4ABC01771FCA6310001F2813 /* EventDetailModel.swift */,
+				4ABC01791FCA632C001F2813 /* NewEventRequestModel.swift */,
+				4ABC017B1FCA66FC001F2813 /* NewEventResponseModel.swift */,
+				4ABC017D1FCA671B001F2813 /* EventDetailRequestModel.swift */,
+				4ABC01811FCA6AB9001F2813 /* EventDetailResponseModel.swift */,
+				4ABC01831FCA6CE8001F2813 /* EnrollEventRequestModel.swift */,
+				4ABC01851FCA6E0A001F2813 /* EnrollEventResponseModel.swift */,
+				4ABC01871FCA6E1F001F2813 /* UnrollEventRequestModel.swift */,
+				4ABC01891FCA6E45001F2813 /* UnrollEventResponseModel.swift */,
+				4ABC018B1FCA9659001F2813 /* StadiumModel.swift */,
+				4ABC018D1FCA976A001F2813 /* CreateStadiumRequestModel.swift */,
+				4ABC018F1FCA97B8001F2813 /* CreateStadiumResponseModel.swift */,
+				4ABC01911FCA99E2001F2813 /* GetStadiumRequestModel.swift */,
+				4ABC01931FCA9A13001F2813 /* GetStadiumResponseModel.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +333,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ABC01841FCA6CE8001F2813 /* EnrollEventRequestModel.swift in Sources */,
+				4ABC018C1FCA9659001F2813 /* StadiumModel.swift in Sources */,
+				4ABC01701FCA5A32001F2813 /* LoginResponseModel.swift in Sources */,
+				4ABC01761FCA6029001F2813 /* EventListResponseModel.swift in Sources */,
+				4ABC01861FCA6E0A001F2813 /* EnrollEventResponseModel.swift in Sources */,
+				4ABC017C1FCA66FC001F2813 /* NewEventResponseModel.swift in Sources */,
+				4ABC01901FCA97B8001F2813 /* CreateStadiumResponseModel.swift in Sources */,
+				4ABC017E1FCA671B001F2813 /* EventDetailRequestModel.swift in Sources */,
+				4ABC01721FCA5BF9001F2813 /* EventListItemModel.swift in Sources */,
 				4ABC013D1FCA56CE001F2813 /* ViewController.swift in Sources */,
+				4ABC018E1FCA976A001F2813 /* CreateStadiumRequestModel.swift in Sources */,
+				4ABC016E1FCA59BD001F2813 /* LoginRequestModel.swift in Sources */,
+				4ABC01921FCA99E2001F2813 /* GetStadiumRequestModel.swift in Sources */,
 				4ABC013B1FCA56CE001F2813 /* AppDelegate.swift in Sources */,
+				4ABC01801FCA690A001F2813 /* UserModel.swift in Sources */,
+				4ABC01821FCA6AB9001F2813 /* EventDetailResponseModel.swift in Sources */,
+				4ABC016A1FCA56F6001F2813 /* RegisterRequestModel.swift in Sources */,
+				4ABC018A1FCA6E45001F2813 /* UnrollEventResponseModel.swift in Sources */,
+				4ABC01781FCA6310001F2813 /* EventDetailModel.swift in Sources */,
+				4ABC01881FCA6E1F001F2813 /* UnrollEventRequestModel.swift in Sources */,
+				4ABC01741FCA600C001F2813 /* EventListRequestModel.swift in Sources */,
+				4ABC016C1FCA5917001F2813 /* RegisterResponseModel.swift in Sources */,
+				4ABC017A1FCA632C001F2813 /* NewEventRequestModel.swift in Sources */,
+				4ABC01941FCA9A13001F2813 /* GetStadiumResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
