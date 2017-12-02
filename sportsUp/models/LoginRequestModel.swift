@@ -17,5 +17,26 @@ import Foundation
 
 struct LoginRequestModel:Codable {
     let userId:String
-    let passWd:String
+    let password:String
+    init(userId:String,passWd:String) {
+        self.userId = userId
+        self.password = passWd
+    }
+}
+
+extension Encodable{
+    func toJsonString() -> String{
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        let result = try! encoder.encode(self)
+        let resultString = String(data: result, encoding: .utf8)
+        return resultString ?? ""
+    }
+    
+    func toJsonData() -> Data{
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        let result = try! encoder.encode(self)
+        return result
+    }
 }

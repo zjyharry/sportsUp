@@ -13,6 +13,7 @@ struct UserModel:Codable{
     var name:String?
     let gender:Int?
     var age:Int?
+    var email:String
     var image:URL?
     
     init(userId:String) {
@@ -21,6 +22,7 @@ struct UserModel:Codable{
         self.name = nil
         self.age = nil
         self.image = nil
+        self.email = ""
     }
     
     init(userId:String,name:String,gender:Int,age:Int) {
@@ -29,5 +31,6 @@ struct UserModel:Codable{
         self.name = name
         self.age = age
         self.image = nil
+        self.email = ""
     }
 }

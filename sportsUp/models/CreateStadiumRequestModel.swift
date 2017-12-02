@@ -8,6 +8,17 @@
 
 import Foundation
 
+
+/// request:
+//{
+//    "newStadium" : {
+//        "descr" : "hello",
+//        "location" : "SU",
+//        "capacity" : 10
+//    },
+//    "userId" : "Jiawei"
+//}
+
 struct CreateStadiumRequestModel:Codable {
     let newStadium:StadiumModel
     let userId:String

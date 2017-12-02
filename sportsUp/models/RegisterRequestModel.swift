@@ -14,13 +14,15 @@ import Foundation
 //"passWd" : "134",
 //"email" : "jzou04@syr.edu",
 //"userId" : "hello",
+//"age" : 2,
 //"name" : "jiayi"
 //}
 
 struct RegisterRequestModel:Codable{
     let userId:String
-    let passWd:String
+    let password:String
     let gender:Int
     let name:String
     let email:String
+    let age:Int
 }

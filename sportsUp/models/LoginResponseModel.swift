@@ -17,3 +17,16 @@ import Foundation
 struct LoginResponseModel:Codable {
     let statusCode:Int
 }
+
+extension Decodable{
+    static func decodeFromJsonString(jsonString:String) throws -> Self{
+        let data = jsonString.data(using: .utf8)
+        let decoder = JSONDecoder()
+        return try decoder.decode(Self.self , from:data!)
+    }
+    
+    static func decodeFromJsonData(data:Data) throws ->Self{
+        let decoder = JSONDecoder()
+        return try decoder.decode(Self.self, from: data)
+    }
+}

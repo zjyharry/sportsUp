@@ -7,8 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A7976861FCF621200C4CDCA /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7976851FCF621200C4CDCA /* EventsTableViewController.swift */; };
+		4A79768A1FCF6BB100C4CDCA /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7976891FCF6BB100C4CDCA /* EventsTableViewCell.swift */; };
+		4A79768E1FCFAC8300C4CDCA /* ActivityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79768D1FCFAC8300C4CDCA /* ActivityTableViewController.swift */; };
+		4A7976901FCFB07800C4CDCA /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79768F1FCFB07800C4CDCA /* ActivityTableViewCell.swift */; };
+		4A7976921FCFBBC900C4CDCA /* SecondRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7976911FCFBBC900C4CDCA /* SecondRegisterViewController.swift */; };
+		4A97024D1FD25AA200BCE979 /* customedUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A97024C1FD25AA200BCE979 /* customedUINavigationController.swift */; };
+		4A97024F1FD2601500BCE979 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A97024E1FD2601500BCE979 /* EventDetailViewController.swift */; };
+		4A9702511FD27AFB00BCE979 /* UsersInEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9702501FD27AFB00BCE979 /* UsersInEventTableViewController.swift */; };
+		4A9702531FD27BA500BCE979 /* UsersInEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9702521FD27BA500BCE979 /* UsersInEventTableViewCell.swift */; };
+		4AAACC4D1FD0E2D800C13F10 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAACC4C1FD0E2D800C13F10 /* ProfileViewController.swift */; };
+		4AAACC4F1FD11B0000C13F10 /* AddEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAACC4E1FD11B0000C13F10 /* AddEventTableViewController.swift */; };
 		4ABC013B1FCA56CE001F2813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC013A1FCA56CE001F2813 /* AppDelegate.swift */; };
-		4ABC013D1FCA56CE001F2813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC013C1FCA56CE001F2813 /* ViewController.swift */; };
 		4ABC01401FCA56CE001F2813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ABC013E1FCA56CE001F2813 /* Main.storyboard */; };
 		4ABC01421FCA56CE001F2813 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ABC01411FCA56CE001F2813 /* Assets.xcassets */; };
 		4ABC01451FCA56CE001F2813 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ABC01431FCA56CE001F2813 /* LaunchScreen.storyboard */; };
@@ -36,6 +46,11 @@
 		4ABC01901FCA97B8001F2813 /* CreateStadiumResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC018F1FCA97B8001F2813 /* CreateStadiumResponseModel.swift */; };
 		4ABC01921FCA99E2001F2813 /* GetStadiumRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC01911FCA99E2001F2813 /* GetStadiumRequestModel.swift */; };
 		4ABC01941FCA9A13001F2813 /* GetStadiumResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC01931FCA9A13001F2813 /* GetStadiumResponseModel.swift */; };
+		4AD921481FD124550063B2CD /* AddEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD921471FD124550063B2CD /* AddEventTableViewCell.swift */; };
+		4ADC79FB1FD1340B00834463 /* AddEventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADC79FA1FD1340B00834463 /* AddEventDetailViewController.swift */; };
+		4AEC14051FCE30D300F87134 /* LoginPageUiewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEC14041FCE30D300F87134 /* LoginPageUiewController.swift */; };
+		4AEC14071FCE326300F87134 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEC14061FCE326300F87134 /* RegisterViewController.swift */; };
+		4AEC140C1FCE368F00F87134 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEC140B1FCE368F00F87134 /* Tools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +71,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A7976851FCF621200C4CDCA /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		4A7976891FCF6BB100C4CDCA /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
+		4A79768D1FCFAC8300C4CDCA /* ActivityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewController.swift; sourceTree = "<group>"; };
+		4A79768F1FCFB07800C4CDCA /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		4A7976911FCFBBC900C4CDCA /* SecondRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondRegisterViewController.swift; sourceTree = "<group>"; };
+		4A97024C1FD25AA200BCE979 /* customedUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customedUINavigationController.swift; sourceTree = "<group>"; };
+		4A97024E1FD2601500BCE979 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		4A9702501FD27AFB00BCE979 /* UsersInEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersInEventTableViewController.swift; sourceTree = "<group>"; };
+		4A9702521FD27BA500BCE979 /* UsersInEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersInEventTableViewCell.swift; sourceTree = "<group>"; };
+		4AAACC4C1FD0E2D800C13F10 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4AAACC4E1FD11B0000C13F10 /* AddEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventTableViewController.swift; sourceTree = "<group>"; };
 		4ABC01371FCA56CE001F2813 /* sportsUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sportsUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ABC013A1FCA56CE001F2813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4ABC013C1FCA56CE001F2813 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4ABC013F1FCA56CE001F2813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4ABC01411FCA56CE001F2813 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4ABC01441FCA56CE001F2813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -91,6 +116,11 @@
 		4ABC018F1FCA97B8001F2813 /* CreateStadiumResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStadiumResponseModel.swift; sourceTree = "<group>"; };
 		4ABC01911FCA99E2001F2813 /* GetStadiumRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStadiumRequestModel.swift; sourceTree = "<group>"; };
 		4ABC01931FCA9A13001F2813 /* GetStadiumResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStadiumResponseModel.swift; sourceTree = "<group>"; };
+		4AD921471FD124550063B2CD /* AddEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventTableViewCell.swift; sourceTree = "<group>"; };
+		4ADC79FA1FD1340B00834463 /* AddEventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventDetailViewController.swift; sourceTree = "<group>"; };
+		4AEC14041FCE30D300F87134 /* LoginPageUiewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageUiewController.swift; sourceTree = "<group>"; };
+		4AEC14061FCE326300F87134 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		4AEC140B1FCE368F00F87134 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +148,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A7976881FCF6B9300C4CDCA /* views */ = {
+			isa = PBXGroup;
+			children = (
+				4A7976891FCF6BB100C4CDCA /* EventsTableViewCell.swift */,
+				4A79768F1FCFB07800C4CDCA /* ActivityTableViewCell.swift */,
+				4AD921471FD124550063B2CD /* AddEventTableViewCell.swift */,
+				4A9702521FD27BA500BCE979 /* UsersInEventTableViewCell.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		4ABC012E1FCA56CE001F2813 = {
 			isa = PBXGroup;
 			children = (
@@ -141,9 +182,11 @@
 		4ABC01391FCA56CE001F2813 /* sportsUp */ = {
 			isa = PBXGroup;
 			children = (
+				4A7976881FCF6B9300C4CDCA /* views */,
+				4AEC14081FCE366700F87134 /* tools */,
 				4ABC01681FCA56D7001F2813 /* models */,
+				4ABC01951FCA9FAA001F2813 /* controllers */,
 				4ABC013A1FCA56CE001F2813 /* AppDelegate.swift */,
-				4ABC013C1FCA56CE001F2813 /* ViewController.swift */,
 				4ABC013E1FCA56CE001F2813 /* Main.storyboard */,
 				4ABC01411FCA56CE001F2813 /* Assets.xcassets */,
 				4ABC01431FCA56CE001F2813 /* LaunchScreen.storyboard */,
@@ -197,6 +240,32 @@
 				4ABC01931FCA9A13001F2813 /* GetStadiumResponseModel.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		4ABC01951FCA9FAA001F2813 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4AEC14041FCE30D300F87134 /* LoginPageUiewController.swift */,
+				4AEC14061FCE326300F87134 /* RegisterViewController.swift */,
+				4A7976911FCFBBC900C4CDCA /* SecondRegisterViewController.swift */,
+				4A7976851FCF621200C4CDCA /* EventsTableViewController.swift */,
+				4A79768D1FCFAC8300C4CDCA /* ActivityTableViewController.swift */,
+				4AAACC4C1FD0E2D800C13F10 /* ProfileViewController.swift */,
+				4AAACC4E1FD11B0000C13F10 /* AddEventTableViewController.swift */,
+				4ADC79FA1FD1340B00834463 /* AddEventDetailViewController.swift */,
+				4A97024C1FD25AA200BCE979 /* customedUINavigationController.swift */,
+				4A97024E1FD2601500BCE979 /* EventDetailViewController.swift */,
+				4A9702501FD27AFB00BCE979 /* UsersInEventTableViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		4AEC14081FCE366700F87134 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				4AEC140B1FCE368F00F87134 /* Tools.swift */,
+			);
+			path = tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,29 +402,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A9702531FD27BA500BCE979 /* UsersInEventTableViewCell.swift in Sources */,
+				4A97024D1FD25AA200BCE979 /* customedUINavigationController.swift in Sources */,
 				4ABC01841FCA6CE8001F2813 /* EnrollEventRequestModel.swift in Sources */,
 				4ABC018C1FCA9659001F2813 /* StadiumModel.swift in Sources */,
 				4ABC01701FCA5A32001F2813 /* LoginResponseModel.swift in Sources */,
 				4ABC01761FCA6029001F2813 /* EventListResponseModel.swift in Sources */,
 				4ABC01861FCA6E0A001F2813 /* EnrollEventResponseModel.swift in Sources */,
 				4ABC017C1FCA66FC001F2813 /* NewEventResponseModel.swift in Sources */,
+				4AAACC4D1FD0E2D800C13F10 /* ProfileViewController.swift in Sources */,
+				4AD921481FD124550063B2CD /* AddEventTableViewCell.swift in Sources */,
 				4ABC01901FCA97B8001F2813 /* CreateStadiumResponseModel.swift in Sources */,
 				4ABC017E1FCA671B001F2813 /* EventDetailRequestModel.swift in Sources */,
+				4A79768A1FCF6BB100C4CDCA /* EventsTableViewCell.swift in Sources */,
 				4ABC01721FCA5BF9001F2813 /* EventListItemModel.swift in Sources */,
-				4ABC013D1FCA56CE001F2813 /* ViewController.swift in Sources */,
+				4AEC14051FCE30D300F87134 /* LoginPageUiewController.swift in Sources */,
+				4A7976901FCFB07800C4CDCA /* ActivityTableViewCell.swift in Sources */,
 				4ABC018E1FCA976A001F2813 /* CreateStadiumRequestModel.swift in Sources */,
+				4A7976861FCF621200C4CDCA /* EventsTableViewController.swift in Sources */,
 				4ABC016E1FCA59BD001F2813 /* LoginRequestModel.swift in Sources */,
 				4ABC01921FCA99E2001F2813 /* GetStadiumRequestModel.swift in Sources */,
+				4AEC140C1FCE368F00F87134 /* Tools.swift in Sources */,
+				4A7976921FCFBBC900C4CDCA /* SecondRegisterViewController.swift in Sources */,
 				4ABC013B1FCA56CE001F2813 /* AppDelegate.swift in Sources */,
 				4ABC01801FCA690A001F2813 /* UserModel.swift in Sources */,
 				4ABC01821FCA6AB9001F2813 /* EventDetailResponseModel.swift in Sources */,
+				4AEC14071FCE326300F87134 /* RegisterViewController.swift in Sources */,
 				4ABC016A1FCA56F6001F2813 /* RegisterRequestModel.swift in Sources */,
 				4ABC018A1FCA6E45001F2813 /* UnrollEventResponseModel.swift in Sources */,
 				4ABC01781FCA6310001F2813 /* EventDetailModel.swift in Sources */,
 				4ABC01881FCA6E1F001F2813 /* UnrollEventRequestModel.swift in Sources */,
 				4ABC01741FCA600C001F2813 /* EventListRequestModel.swift in Sources */,
+				4A97024F1FD2601500BCE979 /* EventDetailViewController.swift in Sources */,
+				4ADC79FB1FD1340B00834463 /* AddEventDetailViewController.swift in Sources */,
+				4A79768E1FCFAC8300C4CDCA /* ActivityTableViewController.swift in Sources */,
 				4ABC016C1FCA5917001F2813 /* RegisterResponseModel.swift in Sources */,
+				4A9702511FD27AFB00BCE979 /* UsersInEventTableViewController.swift in Sources */,
 				4ABC017A1FCA632C001F2813 /* NewEventRequestModel.swift in Sources */,
+				4AAACC4F1FD11B0000C13F10 /* AddEventTableViewController.swift in Sources */,
 				4ABC01941FCA9A13001F2813 /* GetStadiumResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,6 +612,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sportsUp.sportsUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUGG;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

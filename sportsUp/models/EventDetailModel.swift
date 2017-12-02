@@ -18,34 +18,48 @@ import Foundation
 //    "location" : "Beijing",
 //    "capacity" : 15
 //}
-
 struct EventDetailModel:Codable{
     let eventId:Int
     let eventName:String
-    let location:String
+    let location:Int
     let startTime:String
     let endTime:String
     let capacity:Int
     let descr:String
+    let classification:String
     let users:[UserModel]?
-    init(eventId:Int,location:String,descr:String,startTime:Date,endTime:Date,capacity:Int,eventName:String){
+    
+    init(){
+        self.eventId = -1
+        self.eventName = ""
+        self.location = -1
+        self.startTime = ""
+        self.endTime = ""
+        self.capacity = -1
+        self.descr = ""
+        self.classification = ""
+        self.users = nil
+    }
+    init(eventId:Int,location:Int,descr:String,startTime:Date,endTime:Date,classification:String,capacity:Int,eventName:String){
         self.eventName = eventName
         self.eventId = eventId
         self.capacity = capacity
         self.location = location
         self.descr = descr
+        self.classification = classification
         let formatter = DateFormatter()
         formatter.dateFormat = "YYYY-MM-dd'T'hh:mm:ss"
         self.startTime = formatter.string(from: startTime)
         self.endTime = formatter.string(from: endTime)
         self.users = nil
     }
-    init(eventId:Int,location:String,descr:String,startTime:Date,endTime:Date,capacity:Int,eventName:String,users:[UserModel]){
+    init(eventId:Int,location:Int,descr:String,startTime:Date,endTime:Date,capacity:Int,classification:String,eventName:String,users:[UserModel]){
         self.eventName = eventName
         self.eventId = eventId
         self.capacity = capacity
         self.location = location
         self.descr = descr
+        self.classification = classification
         let formatter = DateFormatter()
         formatter.dateFormat = "YYYY-MM-dd'T'hh:mm:ss"
         self.startTime = formatter.string(from: startTime)

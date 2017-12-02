@@ -32,5 +32,5 @@ import Foundation
 
 struct EventListResponseModel:Codable{
     let count:Int
-    let eventList:[EventListItemModel]
+    let eventList:[EventDetailModel]
 }
