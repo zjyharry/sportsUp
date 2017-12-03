@@ -29,6 +29,7 @@ class AddEventDetailViewController: UIViewController {
         datePicker.date = Date()
         datePicker.datePickerMode = .dateAndTime
         
+        self.valueLabel.backgroundColor = UIColor.white
         if(categray == "Location"){
             valueLabel.inputView = picker
         }else if(categray == "Start Time")||(categray == "End Time"){
@@ -49,10 +50,10 @@ class AddEventDetailViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        catagrayLabel.text = categray
+        //catagrayLabel.text = categray
         self.title = categray
         valueLabel.delegate = self
-        self.view.backgroundColor = UIColor.lightGray
+        self.view.backgroundColor = UIColor(red: 242/255.0, green: 242/255.0, blue: 242/255.0, alpha: 1.0)
     }
 
     override func didReceiveMemoryWarning() {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A1D73C31FD32E6000BDCEB3 /* GetUserRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1D73C21FD32E6000BDCEB3 /* GetUserRequestModel.swift */; };
+		4A20C40B1FD4B75700579306 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A20C40A1FD4B75700579306 /* LaunchScreenViewController.swift */; };
 		4A7976861FCF621200C4CDCA /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7976851FCF621200C4CDCA /* EventsTableViewController.swift */; };
 		4A79768A1FCF6BB100C4CDCA /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7976891FCF6BB100C4CDCA /* EventsTableViewCell.swift */; };
 		4A79768E1FCFAC8300C4CDCA /* ActivityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79768D1FCFAC8300C4CDCA /* ActivityTableViewController.swift */; };
@@ -75,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		4A1D73C21FD32E6000BDCEB3 /* GetUserRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserRequestModel.swift; sourceTree = "<group>"; };
+		4A20C40A1FD4B75700579306 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		4A7976851FCF621200C4CDCA /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		4A7976891FCF6BB100C4CDCA /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		4A79768D1FCFAC8300C4CDCA /* ActivityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewController.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				4A9702501FD27AFB00BCE979 /* UsersInEventTableViewController.swift */,
 				4AD3B0C91FD377E50060AEB1 /* CustomedTabBarController.swift */,
 				4AD3B0CD1FD38D610060AEB1 /* ProfileTableViewController.swift */,
+				4A20C40A1FD4B75700579306 /* LaunchScreenViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				4ABC01861FCA6E0A001F2813 /* EnrollEventResponseModel.swift in Sources */,
 				4ABC017C1FCA66FC001F2813 /* NewEventResponseModel.swift in Sources */,
 				4AD921481FD124550063B2CD /* AddEventTableViewCell.swift in Sources */,
+				4A20C40B1FD4B75700579306 /* LaunchScreenViewController.swift in Sources */,
 				4ABC01901FCA97B8001F2813 /* CreateStadiumResponseModel.swift in Sources */,
 				4ABC017E1FCA671B001F2813 /* EventDetailRequestModel.swift in Sources */,
 				4A79768A1FCF6BB100C4CDCA /* EventsTableViewCell.swift in Sources */,

@@ -72,6 +72,8 @@ class ActivityTableViewController: UITableViewController {
         cell.entTimeLabel.text = activity.endTime.replacingOccurrences(of: "T", with: " ")
         cell.touxiangImageView.image = touxiangDic[indexPath.row % 13]
         cell.eventImage.image = imageDic[activity.classification]
+        //cell.touxiangImageView.layer.borderWidth = 1
+        //cell.touxiangImageView.layer.borderColor = UIColor(red: 242/255.0, green: 242/255.0, blue: 242/255.0, alpha: 1.0).cgColor
         return cell
     }
     
