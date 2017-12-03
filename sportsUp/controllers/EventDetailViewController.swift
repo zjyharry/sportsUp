@@ -12,7 +12,7 @@ import MessageUI
 class EventDetailViewController: UIViewController {
     var model = EventDetailModel()
     var locationList = Tools.getStadium()
-    let imageDic:[String:UIImage]=["basketball":#imageLiteral(resourceName: "basketBallImage"),"soccer ball":#imageLiteral(resourceName: "12副本"),"football":#imageLiteral(resourceName: "footballImage")]
+    let imageDic:[String:UIImage]=["basketball":#imageLiteral(resourceName: "basketBallImage"),"soccer":#imageLiteral(resourceName: "12副本"),"football":#imageLiteral(resourceName: "footballImage")]
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var startTimeLabel: UILabel!

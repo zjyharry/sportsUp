@@ -94,8 +94,8 @@ class EventsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventTableViewCell", for: indexPath) as! EventsTableViewCell
         //cell.attendButton.isHidden = true
         //cell.interestedButton.isHidden = true
-        cell.layer.borderWidth = 2
-        cell.layer.borderColor = UIColor.lightGray.cgColor
+        //cell.layer.borderWidth = 2
+        //cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.clipsToBounds = true
         //cell.layer.cornerRadius = 8
         // Configure the cell...

@@ -11,9 +11,9 @@ import UIKit
 //let requestModel = NewEventRequestModel(userId: "jiabin", newEvent: EventDetailModel(eventId: 1, location: 1, descr: "SU", startTime: Date(), endTime: Date(), classification: "123", capacity: 10, eventName: "hello"))
 
 class AddEventTableViewController: UITableViewController {
-    let category = ["event Name","location","description","start time","end time","classification","capacity"]
-    var value = ["event Name":"","locationInt":"","location":"","description":"","start time":"","end time":"","classification":"","capacity":""]
-    let height = (UIScreen.main.bounds.height - 82) / 7
+    let category = ["Event Name","Location","Description","Start Time","End Time","Classification","Capacity"]
+    var value = ["Event Name":"","locationInt":"","Location":"","Description":"","Start Time":"","End Time":"","Classification":"","Capacity":""]
+    //let height = 44
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
@@ -116,7 +116,7 @@ class AddEventTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return height
+        return 44
     }
     
 

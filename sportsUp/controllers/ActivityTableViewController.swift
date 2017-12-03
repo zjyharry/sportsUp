@@ -10,7 +10,7 @@ import UIKit
 import MessageUI
 class ActivityTableViewController: UITableViewController {
     var heightCache =  [Int]()
-    let imageDic:[String:UIImage]=["basketball":#imageLiteral(resourceName: "basketBallImage"),"soccer ball":#imageLiteral(resourceName: "12副本"),"football":#imageLiteral(resourceName: "footballImage")]
+    let imageDic:[String:UIImage]=["basketball":#imageLiteral(resourceName: "basketBallImage"),"soccer":#imageLiteral(resourceName: "12副本"),"football":#imageLiteral(resourceName: "footballImage")]
     let touxiangDic :[UIImage]=[#imageLiteral(resourceName: "stanford"),#imageLiteral(resourceName: "princeton"),#imageLiteral(resourceName: "yale"),#imageLiteral(resourceName: "penn"),#imageLiteral(resourceName: "harvard"),#imageLiteral(resourceName: "maryland"),#imageLiteral(resourceName: "usc"),#imageLiteral(resourceName: "Columbia"),#imageLiteral(resourceName: "georgetown"),#imageLiteral(resourceName: "su"),#imageLiteral(resourceName: "cornell"),#imageLiteral(resourceName: "Duke"),#imageLiteral(resourceName: "Bostoncollege"),#imageLiteral(resourceName: "Columbia"),]
     var activities = [EventDetailModel]()
     let location = Tools.getStadium()
@@ -64,10 +64,10 @@ class ActivityTableViewController: UITableViewController {
         // Configure the cell...
         let activity = activities[indexPath.row]
         cell.model = activity
-        cell.contentLabel.text = activity.eventName
+        //cell.contentLabel.text = activity.eventName
         cell.titleLabel.text = activity.eventName
         cell.locationLabel.text = location[activity.location]?.location
-        cell.contentLabel.text = activity.descr
+        //cell.contentLabel.text = activity.descr
         cell.startTimeLabel.text = activity.startTime.replacingOccurrences(of: "T", with: " ")
         cell.entTimeLabel.text = activity.endTime.replacingOccurrences(of: "T", with: " ")
         cell.touxiangImageView.image = touxiangDic[indexPath.row % 13]
@@ -108,7 +108,7 @@ class ActivityTableViewController: UITableViewController {
                                             let responseModel = try! EventListResponseModel.decodeFromJsonData(data:data!)
                                             self.activities = responseModel.eventList
                                             DispatchQueue.main.async {
-                                                self.heightCache = [Int](repeating: 285, count: self.activities.count)
+                                                self.heightCache = [Int](repeating: 419, count: self.activities.count)
                                                 self.tableView.reloadData()
                                             }
                                             }
