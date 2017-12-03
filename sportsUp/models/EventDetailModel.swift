@@ -19,6 +19,7 @@ import Foundation
 //    "capacity" : 15
 //}
 struct EventDetailModel:Codable{
+
     let eventId:Int
     let eventName:String
     let location:Int
@@ -27,8 +28,8 @@ struct EventDetailModel:Codable{
     let capacity:Int
     let descr:String
     let classification:String
-    let users:[UserModel]?
-    
+    var users:[UserModel]?
+
     init(){
         self.eventId = -1
         self.eventName = ""
@@ -40,6 +41,19 @@ struct EventDetailModel:Codable{
         self.classification = ""
         self.users = nil
     }
+    
+    init(eventId: Int, eventName: String, location: Int, startTimeString: String, endTimeString: String, capacity: Int, descr: String, classification: String) {
+        self.eventId = eventId
+        self.eventName = eventName
+        self.location = location
+        self.startTime = startTimeString
+        self.endTime = endTimeString
+        self.capacity = capacity
+        self.descr = descr
+        self.classification = classification
+        self.users = nil
+    }
+    
     init(eventId:Int,location:Int,descr:String,startTime:Date,endTime:Date,classification:String,capacity:Int,eventName:String){
         self.eventName = eventName
         self.eventId = eventId

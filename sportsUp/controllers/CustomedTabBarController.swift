@@ -1,36 +1,26 @@
 //
-//  ProfileViewController.swift
+//  CustomedTabBarController.swift
 //  sportsUp
 //
-//  Created by Jiayi Zou on 11/30/17.
+//  Created by Jiayi Zou on 12/2/17.
 //  Copyright © 2017 Jiayi Zou. All rights reserved.
 //
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class CustomedTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let selectedColor   = UIColor(red: 96/255.0, green: 126/255.0, blue: 183/255.0, alpha: 1.0)
+       
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: selectedColor], for: .selected)
         // Do any additional setup after loading the view.
     }
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.tabBar.isHidden = false
-    }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func getSelfProfile(){
-        let userId = UserDefaults.standard.string(forKey: "userId")
-        let urlString = "Http://127.0.0.1"
-        let url = URL(string: urlString)
-        
     }
     
 

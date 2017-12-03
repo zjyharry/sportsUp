@@ -7,13 +7,13 @@
 //
 
 import UIKit
-
+import MessageUI
 class ActivityTableViewController: UITableViewController {
     var heightCache =  [Int]()
-    let imageDic = [String:UIImage]()
-    let touxiangDic = [String:UIImage]()
+    let imageDic:[String:UIImage]=["basketball":#imageLiteral(resourceName: "basketBallImage"),"soccer ball":#imageLiteral(resourceName: "12副本"),"football":#imageLiteral(resourceName: "footballImage")]
+    let touxiangDic :[UIImage]=[#imageLiteral(resourceName: "stanford"),#imageLiteral(resourceName: "princeton"),#imageLiteral(resourceName: "yale"),#imageLiteral(resourceName: "penn"),#imageLiteral(resourceName: "harvard"),#imageLiteral(resourceName: "maryland"),#imageLiteral(resourceName: "usc"),#imageLiteral(resourceName: "Columbia"),#imageLiteral(resourceName: "georgetown"),#imageLiteral(resourceName: "su"),#imageLiteral(resourceName: "cornell"),#imageLiteral(resourceName: "Duke"),#imageLiteral(resourceName: "Bostoncollege"),#imageLiteral(resourceName: "Columbia"),]
     var activities = [EventDetailModel]()
-    
+    let location = Tools.getStadium()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundColor = UIColor.lightGray
@@ -37,6 +37,7 @@ class ActivityTableViewController: UITableViewController {
         self.title = "Activity"
         self.tableView.reloadData()
         self.tabBarController?.tabBar.isHidden = false
+        //self.tabBarController?.tabBar.tintColor = UIColor(red: 96, green: 126, blue: 183, alpha: 1)
     }
     // MARK: - Table view data source
 
@@ -53,6 +54,8 @@ class ActivityTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AvtivityTableViewCell", for: indexPath) as! ActivityTableViewCell
+        //cell.attendButton.isHidden = false
+        //cell.interestedButton.isHidden = false
         cell.index = indexPath.row
         cell.layer.borderWidth = 2
         cell.layer.borderColor = UIColor.lightGray.cgColor
@@ -61,12 +64,13 @@ class ActivityTableViewController: UITableViewController {
         // Configure the cell...
         let activity = activities[indexPath.row]
         cell.model = activity
+        cell.contentLabel.text = activity.eventName
         cell.titleLabel.text = activity.eventName
-        cell.locationLabel.text = String(activity.location)
+        cell.locationLabel.text = location[activity.location]?.location
         cell.contentLabel.text = activity.descr
         cell.startTimeLabel.text = activity.startTime.replacingOccurrences(of: "T", with: " ")
-        cell.entTimeLabel.text = activity.endTime
-        cell.touxiangImageView.image = touxiangDic[activity.classification]
+        cell.entTimeLabel.text = activity.endTime.replacingOccurrences(of: "T", with: " ")
+        cell.touxiangImageView.image = touxiangDic[indexPath.row % 13]
         cell.eventImage.image = imageDic[activity.classification]
         return cell
     }
@@ -76,32 +80,38 @@ class ActivityTableViewController: UITableViewController {
     }
     
     func getActivities(){
-        let urlString = "http://127.0.0.1"
+        let requestModel = EventListRequestModel(count: 10, userId: UserDefaults.standard.string(forKey: "UserId")!)
+        let requestData = requestModel.toJsonData()
+        let urlString = "http://\(UserDefaults.standard.string(forKey: "IPADDRESS")!):8080/allevent"
         let url = URL(string:urlString)
-        let request = URLRequest(url: url!)
+        var request = URLRequest(url: url!)
+        request.httpMethod = "POST"
+        request.httpBody = requestData
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        request.timeoutInterval = 10
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request,
                                         completionHandler: {
                                             (data, response, serror) -> Void in
-                                            //if serror != nil{
-                                            //print(serror?.localizedDescription)
+                                            if serror != nil{
+                                            print(serror?.localizedDescription)
                                             //dummy data
-                                            let dummyEvent = EventDetailModel(eventId: 1, location: 1, descr: "this is a dummy data", startTime: Date(), endTime: Date(),capacity: 10, classification:"football", eventName: "dummy data", users: [UserModel(userId: "jw", name: "tian you", gender: 1, age: 1)])
-                                            let dummyEvent2 = EventDetailModel(eventId: 2, location: 2, descr: "this is another dummy data", startTime: Date(), endTime: Date(),capacity: 10, classification:"football", eventName: "dummy data 2", users: [UserModel(userId: "jw", name: "tian you", gender: 1, age: 1)])
-                                            let dummyModel = EventListResponseModel(count: 1, eventList: [dummyEvent,dummyEvent2])
-                                            let dummyJsonString = dummyModel.toJsonString()
-                                            let dummyData = dummyJsonString.data(using: .utf8)
-                                            //}
-                                            //else
-                                            //{
-                                            let responseModel = try! EventListResponseModel.decodeFromJsonData(data:dummyData!)
+//                                            let dummyEvent = EventDetailModel(eventId: 1, location: 1, descr: "this is a dummy data", startTime: Date(), endTime: Date(),capacity: 10, classification:"football", eventName: "dummy data", users: [UserModel(userId: "jw", name: "tian you", gender: 1, age: 1)])
+//                                            let dummyEvent2 = EventDetailModel(eventId: 2, location: 2, descr: "this is another dummy data", startTime: Date(), endTime: Date(),capacity: 10, classification:"football", eventName: "dummy data 2", users: [UserModel(userId: "jw", name: "tian you", gender: 1, age: 1)])
+//                                            let dummyModel = EventListResponseModel(count: 1, eventList: [dummyEvent,dummyEvent2])
+//                                            let dummyJsonString = dummyModel.toJsonString()
+//                                            let dummyData = dummyJsonString.data(using: .utf8)
+                                            }
+                                            else
+                                            {
+                                                print(String(data: data!, encoding: .utf8)!   )
+                                            let responseModel = try! EventListResponseModel.decodeFromJsonData(data:data!)
                                             self.activities = responseModel.eventList
                                             DispatchQueue.main.async {
                                                 self.heightCache = [Int](repeating: 285, count: self.activities.count)
                                                 self.tableView.reloadData()
-                                                //print(self.events)
                                             }
-                                            //}
+                                            }
         })
         dataTask.resume()
     }
@@ -143,14 +153,18 @@ class ActivityTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "EventDetailViewSegue" {
+            let controller = segue.destination as! EventDetailViewController
+            controller.model = (sender as! ActivityTableViewCell).model
+        }
+        
+        
     }
-    */
+}
 
+extension ActivityTableViewController:MFMailComposeViewControllerDelegate{
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
 }

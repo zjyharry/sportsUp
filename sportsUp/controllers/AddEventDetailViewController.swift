@@ -11,7 +11,7 @@ import UIKit
 class AddEventDetailViewController: UIViewController {
     var categray = "1"
     var value = ""
-    let locationList = [StadiumModel]()
+    let locationList = Array(Tools.getStadium().values)
     
     @IBOutlet weak var catagrayLabel: UILabel!
     
@@ -23,18 +23,30 @@ class AddEventDetailViewController: UIViewController {
         let picker = UIPickerView()
         picker.delegate = self
         picker.dataSource = self
+        picker.selectRow(0, inComponent: 0, animated: false)
         
         let datePicker = UIDatePicker()
         datePicker.date = Date()
         datePicker.datePickerMode = .dateAndTime
         
-        if(categray == ""){
+        if(categray == "location"){
             valueLabel.inputView = picker
-        }else if(categray == "1"){
+        }else if(categray == "start time")||(categray == "end time"){
             valueLabel.inputView = datePicker
+            datePicker.addTarget(self, action: #selector(datePickerValueChanged(sender:)), for: .valueChanged)
         }
         // Do any additional setup after loading the view.
     }
+    
+    @objc func datePickerValueChanged(sender:UIDatePicker){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd'T'hh:mm:ss"
+        valueLabel.text = dateFormatter.string(from: sender.date).replacingOccurrences(of: "T", with: " ")
+        
+        let vc = self.navigationController?.viewControllers[1] as! AddEventTableViewController!
+        vc?.value[categray] = valueLabel.text
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         catagrayLabel.text = categray
@@ -65,7 +77,7 @@ extension AddEventDetailViewController:UITextFieldDelegate{
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         value = textField.text!
         let vc = self.navigationController?.viewControllers[1] as! AddEventTableViewController!
-        vc?.value[categray] = value
+        vc?.value[categray] = value + string
 
         //print(vc.isKind(of: AddEventTableViewController.self)==true)
         
@@ -88,6 +100,18 @@ extension AddEventDetailViewController:UIPickerViewDelegate,UIPickerViewDataSour
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return locationList.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return locationList[row].location
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        valueLabel.text = locationList[row].location
+        value = valueLabel.text!
+        let vc = self.navigationController?.viewControllers[1] as! AddEventTableViewController!
+        vc?.value[categray] = value
+        vc?.value["locationInt"] = "\((locationList[row].stadiumID)!)"
     }
     
     

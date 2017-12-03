@@ -12,11 +12,10 @@ import UIKit
 
 class AddEventTableViewController: UITableViewController {
     let category = ["event Name","location","description","start time","end time","classification","capacity"]
-    var value = ["event Name":"","location":"","description":"","start time":"","end time":"","classification":"","capacity":""]
-
+    var value = ["event Name":"","locationInt":"","location":"","description":"","start time":"","end time":"","classification":"","capacity":""]
+    let height = (UIScreen.main.bounds.height - 82) / 7
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -25,6 +24,7 @@ class AddEventTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+
         self.tableView.reloadData()
     }
 
@@ -39,7 +39,64 @@ class AddEventTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    @IBAction func submitButtonPressed(_ sender: Any) {
+        let eventName = value["event Name"]
+        let locationInt = Int(value["locationInt"]!)
+        let desc = value["description"]
+        let startTime = value["start time"]?.replacingOccurrences(of: " ", with: "T")
+        let endTime = value["end time"]?.replacingOccurrences(of: " ", with: "T")
+        let classification = value["classification"]
+        let capacity = Int(value["capacity"]!)
+        
+        
+        //check
+        if(eventName=="")||(locationInt==nil)||(desc=="")||(startTime=="")||(endTime=="")||(classification=="")||(capacity==nil)||(capacity!<0){
+            Tools.showNotification(title: "", context: "Please check all rows in this page", VC: self)
+            return
+        }
+        
+        let requestModel = NewEventRequestModel(userId: UserDefaults.standard.string(forKey: "UserId")!, newEvent: EventDetailModel(eventId: -1, eventName: eventName!, location: locationInt!, startTimeString: startTime!, endTimeString: endTime!, capacity: capacity!, descr: desc!, classification: classification!))
+        let requestJsonData = requestModel.toJsonData()
+        let urlString = "http://\(UserDefaults.standard.string(forKey: "IPADDRESS")!):8080/event_creator"
+        let url = URL(string:urlString)!
+        var request = URLRequest(url: url)
+        request.timeoutInterval = 10
+        request.httpMethod = "POST"
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        request.httpBody = requestJsonData
+        var response:URLResponse?
+        var responseModel:NewEventResponseModel
+        do {
+            let received =  try NSURLConnection.sendSynchronousRequest(request, returning: &response)
+            print(String(data: received, encoding: .utf8))
+            responseModel = try NewEventResponseModel.decodeFromJsonData(data: received)
+        }
+        catch{
+            print(error.localizedDescription);
+            #if !(DEBUG)
+                Tools.showNotification(title: "Request Failed", context: "Connection error, please try again later.", VC: self)
+                return
+            #endif
+        }
+        //dummy result
+        #if(DEBUG)
+            let responseJson = "{\n\"statusCode\" : 1\n}"
+            responseModel = try! LoginResponseModel.decodeFromJsonString(jsonString: responseJson)
+        #endif
+        if(responseModel.statusCode==1){
+            Tools.showNotification(title: nil, context: "Request success", VC: self)
+        }else if (responseModel.statusCode==501){
+            Tools.showNotification(title: "Request Failed", context: "Stadium is full, please try again later", VC: self)
+        }
+        else{
+            //show warning page
+            Tools.showNotification(title: "Request Failed", context: "please try again later.", VC: self)
+        }
+        
+        
+        
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 7
@@ -55,6 +112,11 @@ class AddEventTableViewController: UITableViewController {
         // Configure the cell...
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return height
     }
     
 

@@ -9,7 +9,7 @@
 import UIKit
 
 class UsersInEventTableViewController: UITableViewController {
-
+    var users:[UserModel]? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,15 +34,22 @@ class UsersInEventTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return users?.count ?? 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "usersintableviewcell", for: indexPath) as! UsersInEventTableViewCell
-
-        // Configure the cell...
-
+        cell.userNameLabel.text = users?[indexPath.row].name
+        cell.emailLabel.text = users?[indexPath.row].email
+        switch (users?[indexPath.row].gender)! {
+        case 0:
+            cell.genderImage.image = #imageLiteral(resourceName: "male")
+        case 1:
+            cell.genderImage.image = #imageLiteral(resourceName: "female")
+        default:
+            break
+        }
         return cell
     }
     

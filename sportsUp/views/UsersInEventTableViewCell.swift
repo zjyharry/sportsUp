@@ -10,6 +10,11 @@ import UIKit
 
 class UsersInEventTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    
+    @IBOutlet weak var genderImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

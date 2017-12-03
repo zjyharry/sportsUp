@@ -28,6 +28,7 @@ import Foundation
 //    }
 //}
 struct EventDetailResponseModel:Codable{
-    let isEnrolled:Bool
+    //let isEnrolled:Bool
     let event:EventDetailModel
+    let users:[UserModel]
 }

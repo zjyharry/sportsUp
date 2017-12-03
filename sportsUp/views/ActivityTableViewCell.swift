@@ -21,6 +21,9 @@ class ActivityTableViewCell: UITableViewCell {
     @IBOutlet weak var startTimeLabel: UILabel!
     @IBOutlet weak var entTimeLabel: UILabel!
     
+    @IBOutlet weak var interestedButton: UIButton!
+    
+    @IBOutlet weak var attendButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,13 +36,13 @@ class ActivityTableViewCell: UITableViewCell {
     }
     
     @IBAction func hideButtonPressed(_ sender: Any) {
-//        var vc:UIResponder = self
-//        while vc.isKind(of: ActivityTableViewController.self) != true {
-//            vc = vc.next!
-//        }
-//        let nvc = vc as! ActivityTableViewController
-//        nvc.heightCache[index]=0
-//        nvc.tableView.reloadData()
+        var vc:UIResponder = self
+        while vc.isKind(of: ActivityTableViewController.self) != true {
+            vc = vc.next!
+        }
+        let nvc = vc as! ActivityTableViewController
+        nvc.heightCache[index]=0
+        nvc.tableView.reloadData()
     }
     
     @IBAction func attendButtonPressed(_ sender: Any) {
@@ -88,8 +91,14 @@ class ActivityTableViewCell: UITableViewCell {
             vc = vc.next!
         }
         let nvc = vc as! ActivityTableViewController
-        
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = nvc as! MFMailComposeViewControllerDelegate
+            mail.setSubject("\(UserDefaults.standard.string(forKey: "UserId")!) invite you to join \(model.eventName)")
+            mail.setMessageBody("Hi my friend:\nThis is an invitation from \(UserDefaults.standard.string(forKey: "UserId")!),\nevent:\(model.toJsonString().replacingOccurrences(of: "{", with: "").replacingOccurrences(of: "}", with: ""))\n\n Hope to see you there!", isHTML: false)
+            nvc.present(mail, animated: true, completion: nil)
+        } else {
+            
+        }
     }
-    
-    
 }

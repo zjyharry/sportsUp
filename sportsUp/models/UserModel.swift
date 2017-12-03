@@ -14,7 +14,16 @@ struct UserModel:Codable{
     let gender:Int?
     var age:Int?
     var email:String
-    var image:URL?
+    var image:String?
+    
+    init() {
+        userId = ""
+        name = ""
+        gender = 0
+        age = 0
+        email = ""
+        image = nil
+    }
     
     init(userId:String) {
         self.userId = userId

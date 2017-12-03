@@ -18,12 +18,19 @@ class LoginPageUiewController: UIViewController {
         super.viewDidLoad()
         userIdTextField.delegate = self
         passWdTextField.delegate = self
+
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if(UserDefaults.standard.string(forKey: "UserId") != nil){
+            self.performSegue(withIdentifier: "LoginSuccessSegue", sender: nil)
+        }
     }
     
     @IBAction func LoginButtonPressed(_ sender: UIButton) {
