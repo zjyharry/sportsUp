@@ -40,13 +40,13 @@ class AddEventTableViewController: UITableViewController {
         return 1
     }
     @IBAction func submitButtonPressed(_ sender: Any) {
-        let eventName = value["event Name"]
+        let eventName = value["Event Name"]
         let locationInt = Int(value["locationInt"]!)
-        let desc = value["description"]
-        let startTime = value["start time"]?.replacingOccurrences(of: " ", with: "T")
-        let endTime = value["end time"]?.replacingOccurrences(of: " ", with: "T")
-        let classification = value["classification"]
-        let capacity = Int(value["capacity"]!)
+        let desc = value["Description"]
+        let startTime = value["Start Time"]?.replacingOccurrences(of: " ", with: "T")
+        let endTime = value["End Time"]?.replacingOccurrences(of: " ", with: "T")
+        let classification = value["Classification"]
+        let capacity = Int(value["Capacity"]!)
         
         
         //check

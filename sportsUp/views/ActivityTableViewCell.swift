@@ -86,6 +86,7 @@ class ActivityTableViewCell: UITableViewCell {
     
     @IBAction func shareButtonPressed(_ sender: Any) {
         let controller = MFMessageComposeViewController()
+        let location = Tools.getStadium()
         var vc:UIResponder = self
         while vc.isKind(of: ActivityTableViewController.self) != true {
             vc = vc.next!
@@ -95,7 +96,7 @@ class ActivityTableViewCell: UITableViewCell {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = nvc as! MFMailComposeViewControllerDelegate
             mail.setSubject("\(UserDefaults.standard.string(forKey: "UserId")!) invite you to join \(model.eventName)")
-            mail.setMessageBody("Hi my friend:\nThis is an invitation from \(UserDefaults.standard.string(forKey: "UserId")!),\nevent:\(model.toJsonString().replacingOccurrences(of: "{", with: "").replacingOccurrences(of: "}", with: ""))\n\n Hope to see you there!", isHTML: false)
+            mail.setMessageBody("Hi my friend:\nThis is an invitation from \(UserDefaults.standard.string(forKey: "UserId")!).\nThis event is \(model.eventName) at \((location[model.location]?.location)!)\nThe event time is \(model.startTime.replacingOccurrences(of: "T", with: " "))\n Hope to see you there!", isHTML: false)
             nvc.present(mail, animated: true, completion: nil)
         } else {
             

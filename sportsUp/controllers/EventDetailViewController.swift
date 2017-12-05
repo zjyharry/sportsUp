@@ -90,7 +90,7 @@ class EventDetailViewController: UIViewController {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
             mail.setSubject("\(UserDefaults.standard.string(forKey: "UserId")!) invite you to join \(model.eventName)")
-            mail.setMessageBody("Hi my friend:\nThis is an invitation from \(UserDefaults.standard.string(forKey: "UserId")!),\nevent:\(model.toJsonString().replacingOccurrences(of: "{", with: "").replacingOccurrences(of: "}", with: ""))\n\n Hope to see you there!", isHTML: false)
+                        mail.setMessageBody("Hi my friend:\nThis is an invitation from \(UserDefaults.standard.string(forKey: "UserId")!).\nThis event is \(model.eventName) at \((locationList[model.location]?.location)!)\nThe event time is \(model.startTime.replacingOccurrences(of: "T", with: " "))\n Hope to see you there!", isHTML: false)
             self.present(mail, animated: true, completion: nil)
         } else {
             

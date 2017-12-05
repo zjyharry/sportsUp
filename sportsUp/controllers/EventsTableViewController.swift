@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class EventsTableViewController: UITableViewController {
     var events = [EventDetailModel]()
@@ -214,4 +215,10 @@ class EventsTableViewController: UITableViewController {
     }
  
 
+}
+
+extension EventsTableViewController:MFMailComposeViewControllerDelegate{
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
 }
